@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="profile-image-container">
+        <img src="profile-picture.png" alt="Profile Image">
+        <h1 class="name-title">JaniHegedus</h1>
+    </div>
+</header>
+</body>
+</html>
+```
+
+CSS (`styles.css`):
+
+```css
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+}
+
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-image-container img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border: 5px solid red; /* This creates the red border around the image */
+}
+
+.name-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    font-size: 24px; /* Adjust font size as needed */
+    color: red;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .profile-image-container img {
+        width: 200px; /* Smaller size for mobile */
+    }
+    .name-title {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+}
